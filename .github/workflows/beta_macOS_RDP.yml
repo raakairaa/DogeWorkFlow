@@ -1,4 +1,3 @@
-
 name: CI [MacOS] beta
 
 on: [workflow_dispatch]
@@ -21,14 +20,14 @@ jobs:
     - name: Adding New User
       run: |
         sudo su
-        dscl . -create /Users/joeadmin
-        dscl . -create /Users/joeadmin UserShell /bin/bash
-        dscl . -create /Users/joeadmin RealName "Joe Admin" 
-        dscl . -create /Users/joeadmin UniqueID "510"
-        dscl . -create /Users/joeadmin PrimaryGroupID 20
-        dscl . -create /Users/joeadmin NFSHomeDirectory /Users/joeadmin
-        dscl . -passwd /Users/joeadmin password 
-        dscl . -append /Groups/admin GroupMembership joeadmin
+        dscl . -create /Users/hakiraadityaa
+        dscl . -create /Users/hakiraadityaa UserShell /bin/bash
+        dscl . -create /Users/hakiraadityaa RealName "Hakira Aditya" 
+        dscl . -create /Users/hakiraadityaa UniqueID "510"
+        dscl . -create /Users/hakiraadityaa PrimaryGroupID 20
+        dscl . -create /Users/hakiraadityaa NFSHomeDirectory /Users/hakiraadityaa
+        dscl . -passwd /Users/hakiraadityaa admin321 
+        dscl . -append /Groups/admin GroupMembership hakiraadityaa
 
     - name: Ngrok Auth
       env:
